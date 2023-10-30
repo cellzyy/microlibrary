@@ -35,7 +35,7 @@ microlib.SmileyButtons(button: Button); // Button.A or Button.B
 > v1.0:
 > Connection, Send, ValidateStirng, Add, Subtraction, Multiply, Divide, Roll, Pear added.
 > 
-> v1,1:
+> v1.1:
 > LoveMeter added, and automatic showing for receiving string.
 >
 > v1.2:
