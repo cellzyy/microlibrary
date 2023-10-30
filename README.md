@@ -3,6 +3,7 @@
 A hands-free library for MakeCode. With over 10 functions so far. I am constantly making updates to this. Using MicroLibrary you agree to the MIT License.
 
 > Review license: https://raw.githubusercontent.com/mctnb/microlibrary/master/LICENSE
+> 
 > Code was made in MakeCode, you can steal scan for viruses if you need
 
 # Functions
@@ -24,7 +25,7 @@ microlib.LoveMeter(); // basically the tutorial in a function.
 
 > v1.0:
 > Connection, Send, ValidateStirng, Add, Subtraction, Multiply, Divide, Roll, Pear added.
-
+> 
 > v1,1:
 > LoveMeter added, and automatic showing for receiving string.
 
