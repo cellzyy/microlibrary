@@ -50,6 +50,27 @@ namespace microlib {
         return basic.showNumber(6);
     }
 
+    // micro:bit tutorials but functions
+
+    export function LoveMeter(){
+        let LoveMeter = randint(0,100)
+        basic.showString("LOVE METER")
+        basic.showNumber(LoveMeter)
+        if(LoveMeter <= 25){
+            basic.showString("NO LOVE")
+        }else{
+            if(LoveMeter <= 50){
+                basic.showString("BFF LOVE")
+            }else{
+                if(LoveMeter <= 75){
+                    basic.showString("BROKENHEARTED LOVE")
+                }else{
+                    basic.showString("HOT FIERY LOVE")
+                }
+            }
+        }
+    }
+
     // built-in functions (simple)
 
     radio.onReceivedString(function(received){
@@ -59,6 +80,13 @@ namespace microlib {
 
 // Playground:
 
+// v1.1 LOVE METER
+
+input.onPinPressed(TouchPin.P0, function(){
+    microlib.LoveMeter()
+})
+
+/* v1.0:
 microlib.Roll();
 pause(200);
 microlib.Pear();
@@ -68,3 +96,4 @@ microlib.Pear();
 microlib.Connection(1);
 microlib.Send("MCTNB", "test") // will send to MicroBit 1 first for some reason.
 microlib.Send("MCTNB", "test2") // will send to both MicroBits
+*/
