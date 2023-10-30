@@ -49,6 +49,12 @@ namespace microlib {
         // the joke is 6 looks like a pear on microbit
         return basic.showNumber(6);
     }
+
+    // built-in functions (simple)
+
+    radio.onReceivedString(function(received){
+        basic.showString(received)
+    })
 }
 
 // Playground:
@@ -58,3 +64,7 @@ pause(200);
 microlib.Pear();
 
 // microlibrary still in progress
+
+microlib.Connection(1);
+microlib.Send("MCTNB", "test") // will send to MicroBit 1 first for some reason.
+microlib.Send("MCTNB", "test2") // will send to both MicroBits
