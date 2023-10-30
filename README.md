@@ -1,3 +1,5 @@
+![version](https://img.shields.io/badge/version-1.0-green) ![functions](https://img.shields.io/badge/functions-10-blue)
+
 > HOLD UP!
 >
 > We open source now: https://mctnb.github.io/microlibrary/main.ts
