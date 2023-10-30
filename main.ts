@@ -71,6 +71,18 @@ namespace microlib {
         }
     }
 
+    export function SmileyButtons(pressed: Button){
+        if(pressed==Button.A){
+            basic.showIcon(IconNames.Happy)
+        }else{
+            if(pressed=Button.B){
+                basic.showIcon(IconNames.Sad)
+            }else{
+                console.log("Error")
+            }
+        }
+    }
+
     // built-in functions (simple)
 
     radio.onReceivedString(function(received){
@@ -80,11 +92,23 @@ namespace microlib {
 
 // Playground:
 
-// v1.1 LOVE METER
+// v1.2 SMILEY BUTTONS
+
+input.onButtonPressed(Button.A, function(){
+    microlib.SmileyButtons(Button.A)
+})
+
+input.onButtonPressed(Button.B, function(){
+    microlib.SmileyButtons(Button.B)
+})
+
+/* v1.1 LOVE METER
 
 input.onPinPressed(TouchPin.P0, function(){
     microlib.LoveMeter()
 })
+
+*/
 
 /* v1.0:
 microlib.Roll();
