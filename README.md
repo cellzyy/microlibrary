@@ -1,5 +1,36 @@
+# What is MicroLibrary
 
-> Open this page at [https://mctnb.github.io/microlibrary/](https://mctnb.github.io/microlibrary/)
+A hands-free library for MakeCode. With over 10 functions so far. I am constantly making updates to this. Using MicroLibrary you agree to the MIT License.
+
+> Review license: https://raw.githubusercontent.com/mctnb/microlibrary/master/LICENSE
+> Code was made in MakeCode, you can steal scan for viruses if you need
+
+# Functions
+
+```js
+microlib.Connection(channel: number); // connect to a radio channel number must be equal or under 255.
+microlib.Send(username: string, message: string); // send a message
+microlib.ValidateString(string: any); // string or number, also this is useless cuz toString, toNumber, and parseInt.
+microlib.Add(number1: number, number2: number); // add (obvious)
+microlib.Subtraction(number1: number, number2: number); // subtract (obvious)
+microlib.Multiply(number1: number, number2: number); // multiply (obvious)
+microlib.Divide(number1: number, number2: number); // divide (obvious)
+microlib.Roll(); // returns basic.showNumber, just for testing
+microlib.Pear(); // returns basic.showNumber(6), just for funnies
+microlib.LoveMeter(); // basically the tutorial in a function.
+```
+
+# Version
+
+> v1.0:
+> Connection, Send, ValidateStirng, Add, Subtraction, Multiply, Divide, Roll, Pear added.
+
+> v1,1:
+> LoveMeter added, and automatic showing for receiving string.
+
+# MakeCode Basic Stuff
+
+> I don't control this part, it's controlled by MakeCode themselves.
 
 ## Use as Extension
 
