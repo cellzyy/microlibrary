@@ -1,3 +1,9 @@
+> HOLD UP!
+>
+> We open source now: https://mctnb.github.io/microlibrary/main.ts
+>
+> When you edit, make a PR with your changes and I will review them!
+
 # What is MicroLibrary
 
 A hands-free library for MakeCode. With over 10 functions so far. I am constantly making updates to this. Using MicroLibrary you agree to the MIT License.
