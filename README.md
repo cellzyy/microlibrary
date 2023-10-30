@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-1.0-green) ![functions](https://img.shields.io/badge/functions-10-blue)
+![version](https://img.shields.io/badge/version-1.2-green) ![functions](https://img.shields.io/badge/functions-11-blue)
 
 > HOLD UP!
 >
@@ -27,6 +27,7 @@ microlib.Divide(number1: number, number2: number); // divide (obvious)
 microlib.Roll(); // returns basic.showNumber, just for testing
 microlib.Pear(); // returns basic.showNumber(6), just for funnies
 microlib.LoveMeter(); // basically the tutorial in a function.
+microlib.SmileyButtons(button: Button); // Button.A or Button.B
 ```
 
 # Version
@@ -36,6 +37,9 @@ microlib.LoveMeter(); // basically the tutorial in a function.
 > 
 > v1,1:
 > LoveMeter added, and automatic showing for receiving string.
+>
+> v1.2:
+> Smiley Buttons added.
 
 # MakeCode Basic Stuff
 
