@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-1.2-green) ![functions](https://img.shields.io/badge/functions-11-blue)
+![version](https://img.shields.io/badge/version-1.3-purple) ![functions](https://img.shields.io/badge/functions-14-blue)
 
 > HOLD UP!
 >
@@ -28,6 +28,9 @@ microlib.Roll(); // returns basic.showNumber, just for testing
 microlib.Pear(); // returns basic.showNumber(6), just for funnies
 microlib.LoveMeter(); // basically the tutorial in a function.
 microlib.SmileyButtons(button: Button); // Button.A or Button.B
+microlib.SetTime(hour: number, minute: number, second: number, ampm: timeanddate.MornNight); // set time
+microlib.CurrentTime(); // returns with current time
+microlib.MicrobitTime(); // returns with how many seconds the micro:bit has been powered on for.
 ```
 
 # Version
@@ -40,6 +43,9 @@ microlib.SmileyButtons(button: Button); // Button.A or Button.B
 >
 > v1.2:
 > Smiley Buttons added.
+>
+> 1.3:
+> Time functions added.
 
 # MakeCode Basic Stuff
 
