@@ -1,4 +1,10 @@
 // microlibrary v1.0 (MIT LICENSE, CAN BE EDITED.) \\
+// microlibrary now uses Time and Date extension
+
+enum Time {
+    AM = timeanddate.MornNight.AM,
+    PM = timeanddate.MornNight.PM
+}
 
 namespace microlib {
     export function Connection(RadioID: number) {
@@ -50,6 +56,8 @@ namespace microlib {
         return basic.showNumber(6);
     }
 
+    
+
     // micro:bit tutorials but functions
 
     export function LoveMeter(){
@@ -83,6 +91,20 @@ namespace microlib {
         }
     }
 
+    // Time
+
+    export function SetTime(hour: number, minute: number, second: number, ampm: timeanddate.MornNight){
+        timeanddate.setTime(hour, minute, second, ampm)
+    }
+
+    export function CurrentTime(){
+        return timeanddate.time(timeanddate.TimeFormat.HMMSSAMPM)
+    }
+
+    export function MicrobitTime(){
+        return timeanddate.secondsSinceReset()
+    }
+
     // built-in functions (simple)
 
     radio.onReceivedString(function(received){
@@ -92,7 +114,13 @@ namespace microlib {
 
 // Playground:
 
-// v1.2 SMILEY BUTTONS
+// v1.3 Date and Time blocks (testing)
+
+microlib.SetTime(1, 13, 0, timeanddate.MornNight.PM)
+console.log(microlib.CurrentTime())
+console.log(microlib.MicrobitTime())
+
+/* v1.2 SMILEY BUTTONS
 
 input.onButtonPressed(Button.A, function(){
     microlib.SmileyButtons(Button.A)
@@ -102,20 +130,19 @@ input.onButtonPressed(Button.B, function(){
     microlib.SmileyButtons(Button.B)
 })
 
-/* v1.1 LOVE METER
+v1.1 LOVE METER
 
 input.onPinPressed(TouchPin.P0, function(){
     microlib.LoveMeter()
 })
 
-*/
+v1.0 Basic:
 
-/* v1.0:
 microlib.Roll();
 pause(200);
 microlib.Pear();
 
-// microlibrary still in progress
+microlibrary still in progress
 
 microlib.Connection(1);
 microlib.Send("MCTNB", "test") // will send to MicroBit 1 first for some reason.
