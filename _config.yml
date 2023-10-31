@@ -8,3 +8,5 @@ plugins:
 include:
   - assets
   - README.md
+  - pxt.md
+  - pxt.json
