@@ -1,12 +1,21 @@
 // microlibrary v1.0 (MIT LICENSE, CAN BE EDITED.) \\
 // microlibrary now uses Time and Date extension
+// ml v1.4 testing
 
 enum Time {
     AM = timeanddate.MornNight.AM,
     PM = timeanddate.MornNight.PM
 }
 
+let cache: any = []
+
 namespace microlib {
+    export function FasterConnection(RadioID: number){
+        if(RadioID <= 255){
+            radio.setGroup(RadioID)
+        }
+    }
+
     export function Connection(RadioID: number) {
         if(RadioID >= 256){
             basic.showString("256 and above are invalid channels.")
@@ -56,8 +65,6 @@ namespace microlib {
         return basic.showNumber(6);
     }
 
-    
-
     // micro:bit tutorials but functions
 
     export function LoveMeter(){
@@ -91,6 +98,26 @@ namespace microlib {
         }
     }
 
+    // Servo testing
+
+    export function WritePin(to: number, pin: AnalogPin){
+        pins.servoWritePin(pin, to)
+    }
+
+    // cache testing V2
+
+    export function write(writeToCache: any){
+        cache.push(writeToCache)
+    }
+
+    export function grab(lookingFor: any){
+        return cache[lookingFor] || "Error: Doesn't exist"
+    }
+
+    export function show(){
+        return cache
+    }
+
     // Time
 
     export function SetTime(hour: number, minute: number, second: number, ampm: timeanddate.MornNight){
@@ -114,13 +141,31 @@ namespace microlib {
 
 // Playground:
 
-// v1.3 Date and Time blocks (testing)
+// v1.4 servos
+
+microlib.FasterConnection(1)
+
+input.onButtonPressed(Button.A, function(){
+    microlib.WritePin(180, AnalogPin.P0)
+})
+
+input.onButtonPressed(Button.B, function(){
+    microlib.WritePin(0, AnalogPin.P0)
+})
+
+/*
+v1.31 was testing cache thing but its removed now (p.s. now testing again in v1.4)
+
+microlib.ChangeCache({"Test": "string", "test": 1})
+console.log(microlib.CacheData())
+
+v1.3 Date and Time blocks (testing)
 
 microlib.SetTime(1, 13, 0, timeanddate.MornNight.PM)
 console.log(microlib.CurrentTime())
 console.log(microlib.MicrobitTime())
 
-/* v1.2 SMILEY BUTTONS
+v1.2 SMILEY BUTTONS
 
 input.onButtonPressed(Button.A, function(){
     microlib.SmileyButtons(Button.A)
