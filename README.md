@@ -10,6 +10,8 @@
 
 A hands-free library for MakeCode. With over 10 functions so far. I am constantly making updates to this. Using MicroLibrary you agree to the MIT License.
 
+You can now actually use this as an extension. I stopped the functions from auto-pushing.
+
 > Review license: https://raw.githubusercontent.com/mctnb/microlibrary/master/LICENSE
 > 
 > Code was made in MakeCode, you can steal scan for viruses if you need
@@ -31,6 +33,11 @@ microlib.SmileyButtons(button: Button); // Button.A or Button.B
 microlib.SetTime(hour: number, minute: number, second: number, ampm: timeanddate.MornNight); // set time
 microlib.CurrentTime(); // returns with current time
 microlib.MicrobitTime(); // returns with how many seconds the micro:bit has been powered on for.
+microlib.WritePin(to: number, pin: AnalogPin); // for servos! (easier typing)
+microlib.write(writeToCache: any); // broken still testing
+microlib.grab(lookingFor: any); // testing
+microlib.show(); // testing
+microlib.cd(count: number); // countdown
 ```
 
 # Version
@@ -46,6 +53,8 @@ microlib.MicrobitTime(); // returns with how many seconds the micro:bit has been
 >
 > 1.3:
 > Time functions added.
+>
+> Stopped updating log, just look at the information when I do a push request, also its v1.5 as of writing this (next push request will have version)
 
 # MakeCode Basic Stuff
 
