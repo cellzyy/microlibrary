@@ -118,6 +118,14 @@ namespace microlib {
         return cache
     }
 
+    // Countdown
+
+    export function cd(count: number){
+        for (let i = 1; i < count+1; i++) {
+            console.log(i)
+        }
+    }
+
     // Time
 
     export function SetTime(hour: number, minute: number, second: number, ampm: timeanddate.MornNight){
@@ -139,57 +147,5 @@ namespace microlib {
     })
 }
 
-// Playground:
-
-// v1.4 servos
-
-microlib.FasterConnection(1)
-
-input.onButtonPressed(Button.A, function(){
-    microlib.WritePin(180, AnalogPin.P0)
-})
-
-input.onButtonPressed(Button.B, function(){
-    microlib.WritePin(0, AnalogPin.P0)
-})
-
-/*
-v1.31 was testing cache thing but its removed now (p.s. now testing again in v1.4)
-
-microlib.ChangeCache({"Test": "string", "test": 1})
-console.log(microlib.CacheData())
-
-v1.3 Date and Time blocks (testing)
-
-microlib.SetTime(1, 13, 0, timeanddate.MornNight.PM)
-console.log(microlib.CurrentTime())
-console.log(microlib.MicrobitTime())
-
-v1.2 SMILEY BUTTONS
-
-input.onButtonPressed(Button.A, function(){
-    microlib.SmileyButtons(Button.A)
-})
-
-input.onButtonPressed(Button.B, function(){
-    microlib.SmileyButtons(Button.B)
-})
-
-v1.1 LOVE METER
-
-input.onPinPressed(TouchPin.P0, function(){
-    microlib.LoveMeter()
-})
-
-v1.0 Basic:
-
-microlib.Roll();
-pause(200);
-microlib.Pear();
-
-microlibrary still in progress
-
-microlib.Connection(1);
-microlib.Send("MCTNB", "test") // will send to MicroBit 1 first for some reason.
-microlib.Send("MCTNB", "test2") // will send to both MicroBits
-*/
+// oops just realized playground makes users who using this as an extension
+// automatically load the code sorry
